@@ -16,3 +16,16 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+
+Outputs:
+  DemoStorageBucketName:
+    Description: "Name of the S3 bucket to hold demo storage"
+    Value: !Ref DemoStorage
+    Export:
+      Name: DemoStorageBucketName
+
+  DemoStorageBucketARN:
+    Description: "ARN of the S3 bucket to hold demo storage"
+    Value: !GetAtt DemoStorage.Arn
+    Export:
+      Name: DemoStorageBucketARN
