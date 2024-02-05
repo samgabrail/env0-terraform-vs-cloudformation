@@ -48,3 +48,14 @@ resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
     status = "Enabled"
   }
 }
+
+
+output "demo_storage_bucket_name" {
+  description = "The name of the S3 bucket for demo storage"
+  value       = aws_s3_bucket.demo_storage.bucket
+}
+
+output "demo_storage_bucket_arn" {
+  description = "The ARN of the S3 bucket for demo storage"
+  value       = aws_s3_bucket.demo_storage.arn
+}
