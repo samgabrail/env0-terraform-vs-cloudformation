@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
+  region = us-east-1
 }
 
 resource "aws_s3_bucket" "demo_storage" {
